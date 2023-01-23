@@ -4,7 +4,7 @@ function startConnect() {
   clientID = "clientID-" + parseInt(Math.random() * 100);
 
   // Initialise une nouvelle connexion de client Paho
-  client = new Paho.MQTT.Client("test.mosquitto.org", Number(8080), clientID);
+  client = new Paho.MQTT.Client("test.mosquitto.org", 8080, clientID);
 
   // Définit les gestionnaires de rappel
   client.onConnectionLost = onConnectionLost;
