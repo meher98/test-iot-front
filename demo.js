@@ -24,9 +24,9 @@ function onConnect() {
 
 // Appelée lorsque le client perd sa connexion
 function onConnectionLost(responseObject) {
-  document.getElementById("temp").innerHTML += "ERROR: Connection lost";
+  document.getElementById("temp").innerHTML = "ERROR: Connection lost";
   if (responseObject.errorCode !== 0) {
-    document.getElementById("temp").innerHTML +=
+    document.getElementById("temp").innerHTML =
       "ERROR: " + +responseObject.errorMessage;
   }
 }
